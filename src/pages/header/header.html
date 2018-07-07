@@ -18,22 +18,11 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-content>
+    <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
   </ion-content>
-
 </ion-menu>
-
-<ion-footer no-border class="companies-footer">  
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <div class="footer-info">Jesus Garcia #1276-1 Col. Villaseñor C.P. 44260, Guadalajara, Jalisco, México. Teléfonos: 38-54-9522 y 38-53-89-73</div>
-</ion-footer>
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

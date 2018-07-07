@@ -1,0 +1,53 @@
+<ion-content>
+<ion-slides *ngIf="images && images.length" autoplay="5000" loop="true" speed="500" class="main-banner">
+  <ion-slide *ngFor="let img of images" >
+    <img src="{{ img }}">
+  </ion-slide>
+</ion-slides>
+
+  <ion-fab bottom right edge >
+    <button ion-fab mini color="brand-color"><ion-icon name="thumbs-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="brand-color"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="brand-color"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-card color="brand-color" class="description-box">
+  <ion-card-content text-center>
+    Conoce nuestro producto.
+  </ion-card-content>
+</ion-card>
+
+<ion-card color="" class="description-box">
+  <ion-card-content text-center>
+    Te protegemos contra cualquier eventualidad que ponga en riesgo tu estabilidad financiera y la<br>tranquilidad de tu familia como son una muerte, un accidente o una enfermedad.<br>Proporcionándote un respaldo que te proteja de esos imprevistos:
+  </ion-card-content>
+  <ion-card-content text-center>
+    <ion-icon name="people" color="brand-color"></ion-icon><br>
+    <strong>Seguro de Gastos médicos mayores<br>Seguro de Accidentes Personales<br>Seguro de Vida.
+    </strong>
+  </ion-card-content>
+  <ion-card-content text-center>
+    Te ayudammos a conseguir tus metas financieras mediante el hábito de ahorro que te permitorá tener<br>tranquilidad sobre tu futuro. Con un plan de ahorro con o sin seguro de vida. Acorde a tus<br>necesidades financieras y tus posibilidades.
+  </ion-card-content>
+  <ion-card-content text-center>
+    <strong>Seguros de autos todo tipo de uso.<br>Camiones de transporte público de pasajeros<br>Camiones de construcción o transporte de carga.<br>Seguro para la carga que se transporta</strong>
+  </ion-card-content>
+  <ion-grid class="last-element">
+    <ion-row>
+    <ion-col col-4>
+      <ion-icon name="" color="brand-color"></ion-icon> <ion-label>Seguro de casa habitación</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-icon name="" color="brand-color"></ion-icon> <ion-label>Seguro de póliza empresarial a tu medida</ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-icon name="" color="brand-color"></ion-icon> <ion-label>Seguro gastos funerarios</ion-label>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-card>
+
+
+</ion-content>

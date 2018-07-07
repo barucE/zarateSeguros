@@ -14,3 +14,301 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.brand-color{
+	background-color: black;
+	color: white;
+}
+.footer-info{
+	display: block;
+	background-color: #888;
+	color: white;
+	padding: 4px;
+}
+.toolbar{
+	padding: 0;
+	height: auto;
+	min-height: 0;
+}
+#logo{
+	height: 40px;
+}
+
+.main-banner{
+	height: 300px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+.description-box{
+	margin: 0;
+	width: 100%;
+}
+.products-grid{
+	.col{
+		font-size: 1.2em;
+		width: 50%;
+  height: 50%;
+  overflow: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+		.icon{
+			font-size: 2.4em;
+			vertical-align: middle;
+		}
+		.label{
+			display: inline-block;
+			vertical-align: middle;
+			white-space: pre-wrap;
+			width: 130px;
+			border: 0px solid green;
+		}
+		border: 0px solid red;
+		position: relative;
+	}
+	margin-bottom: 20px;
+}
+
+.companies-footer{
+	text-align: center;
+	height: 58px;
+	img{
+		display: inline-block;
+		height: 30px;
+	}
+	background: white;
+}
+
+@media screen and (max-width: 767px) {
+    .hidden-xs {
+        display:none;
+    }
+}
+@media screen and (min-width: 767px) {
+    .hidden-lg {
+        display:none;
+    }
+}
+.orange{
+	color: #f35731;
+}
+.last-element{
+	padding-bottom: 250px;
+}
+
+.ribbon-wrapper{
+	 background-color: #777;
+	 text-align: center;
+	 height: 25px;
+	 position: relative;
+	 width: 450px;
+	 margin: auto;
+	 margin-bottom: 20px;
+	 &:before, &:after{
+	 	content: ' ';
+	 	height: 0;
+	 	position: absolute;
+	 	width: 0;
+	 	border: 12px solid transparent;
+	 	border-right-color: white;
+	 	top: 1px;
+	 	right: 0;
+	 }
+	 &:after{
+	 	border-right-color: transparent;
+	 	border-left-color: white;
+	 	left: 0;
+	 }
+	.ribbon-text{
+		border-radius: 2px;
+		height: 32px;
+		position: absolute;
+		top: 0px;
+		left: calc(50% - 160px);
+		width: 320px;
+		background-color: #777;
+		display: inline-block;
+		color: #fff;
+		padding: 3px 20px;
+		border:1px solid white;
+		border-top: 4px solid white;
+		
+		
+	}
+}
+
+.background-orange{
+	background-color: #f35731 !important;
+}
+.bg-gray{
+	background-color: #777;
+}
+ion-fab[bottom][edge]{
+	bottom: 60px;
+}
+
+.arrow-wrapper{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 100px;
+	div{
+
+		hr{
+			color: white;
+			background: white;
+			width: 30%;
+			margin: 10px auto;
+
+		}
+		font-size: 0.8em;
+				strong{
+			text-align: center;
+			display: block;
+			font-size: 1.3em;
+		}
+		text-align: left;
+		height: 100%;
+		color: white;
+		padding: 20px;
+		width: 40%;
+		border-radius: 2px;
+		display: inline-block;
+		vertical-align: top;
+		margin: auto;
+		background-color: #777;
+		position: relative;
+			
+		margin-left: 10px;
+		&:nth-child(2){
+			
+			
+			 &:before{
+		 	content: ' ';
+		 	height: 0;
+		 	position: absolute;
+		 	width: 0;
+		 	border: 15px solid transparent;
+		 	border-left-color: white;
+		 	top: calc(50% - 22px);
+		 	left: 0;
+		 
+		 }
+		 &:after{
+		 	content: ' ';
+		 	height: 0;
+		 	position: absolute;
+		 	width: 0;
+		 	border: 15px solid transparent;
+		 	border-left-color: #777;
+		 	top: calc(50% - 22px);
+		 	left: -15px;
+		 
+		 }
+		 }
+	 }
+}
+
+.contact{
+
+	
+	width: 100%;
+	color: white;
+	&.form{
+		height: 55%;
+		margin-top: 50px;
+		background-color: #777;
+		.left, .right{
+			vertical-align: top;
+			display: inline-block;
+			box-sizing: border-box;
+			
+			width: 50%;
+			height: 90%;
+
+		}
+		.right{
+			overflow: hidden;
+			margin-left: -4px;
+			padding-top: 10px;
+			form{
+				
+				width: 90%;
+				height: 100%;
+
+				.item{
+					.label{
+						
+						height: 20px !important;
+						overflow: visible;
+					}
+
+					height: 55px;
+					font-size: 0.8em;
+
+				}
+			}
+		}
+		.left{
+			position: relative;
+			span{
+				text-align: center;
+				position: absolute;
+				top: 40%;
+				left: 25%;
+				width: 50%;
+
+			}
+		}
+		.ribbon-wrapper{
+			width: 80%;
+			margin-top: -15px;
+			background-color: #888;
+			.ribbon-text{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				padding-top: 6px;
+				width: 80%;
+				left: 10%;
+				border-color: #777;
+				background-color: #999;
+			}
+			 &:before, &:after{
+			 	border-right-color: #777;
+			 }
+			 &:after{
+			 	border-right-color: transparent;
+			 	border-left-color: #777;
+			 }
+		}
+		
+	}
+	&.map{
+		height: 45%;
+		background-color: white;
+		position: relative;
+		margin-bottom: 100px;
+		.arrow{		
+			text-align: center;	
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			background-color: $orange-base;
+			padding: 5px;
+			&:after{
+			 	content: ' ';
+			 	height: 0;
+			 	position: absolute;
+			 	width: 0;
+			 	border-top: 27px solid transparent;
+			 	border-left: 0px solid blue;
+			 	border-bottom: 0 solid cyan;
+			 	border-right: 20px solid white;
+			 	top: 0px;
+			 	right: 0;
+			}
+		}
+	}
+}

@@ -1,18 +1,55 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>
+<ion-slides *ngIf="images && images.length" autoplay="5000" loop="true" speed="500" class="main-banner">
+  <ion-slide *ngFor="let img of images" >
+    <img src="{{ img }}">
+  </ion-slide>
+</ion-slides>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-fab bottom right edge >
+    <button ion-fab mini color="brand-color"><ion-icon name="thumbs-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="brand-color"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="brand-color"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+
+<ion-card color="brand-color" class="description-box">
+  <ion-card-content text-center>
+    Bienvenidos a <strong>Zarate Seguros</strong><br><br>Te brindamos seguridad y tranquilidad con nuestros productos<br>para que tú te dediques a disfrutar.
+  </ion-card-content>
+</ion-card>
+
+
+<ion-grid class="products-grid last-element">
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon name="body" color="brand-color"></ion-icon> <ion-label>VIDA</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="logo-usd" color="brand-color"></ion-icon> <ion-label>PLANES DE AHORROS</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="medkit" color="brand-color"></ion-icon> <ion-label>GASTOS MEDICOS MAYORES</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="flash" color="brand-color"></ion-icon> <ion-label>DAÑOS</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon name="plane" color="brand-color"></ion-icon> <ion-label>VIAJES</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="home" color="brand-color"></ion-icon> <ion-label>CASA</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="car" color="brand-color"></ion-icon> <ion-label>AUTOS</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-icon name="apps" color="brand-color"></ion-icon> <ion-label>COTIZAR</ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

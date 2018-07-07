@@ -1,0 +1,36 @@
+<ion-content>
+<ion-slides *ngIf="images && images.length" autoplay="5000" loop="true" speed="500" class="main-banner">
+  <ion-slide *ngFor="let img of images" >
+    <img src="{{ img }}">
+  </ion-slide>
+</ion-slides>
+
+  <ion-fab bottom right edge >
+    <button ion-fab mini color="brand-color"><ion-icon name="thumbs-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="brand-color"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="brand-color"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+ <ion-card color="brand-color" class="description-box">
+  <ion-card-content text-center>
+    Nuestra misión es ayudar a personas, familias y empresas mexicanas<br>a proteger su patrimonio, mejorando su calidad de vida.
+  </ion-card-content>
+</ion-card>
+
+<ion-card color="" class="description-box">
+  <ion-card-content text-center>
+    <strong class="orange">NOSOTROS</strong><br><br>Somos especialistas en finanzas personales, y asesoría en riesgos, otorgando<br>un servicio de calidad a nuestros clientes y empresas.
+  </ion-card-content>
+</ion-card>
+
+<ion-card color="" class="description-box last-element">
+  <ion-card-content text-center>
+  	<div class="ribbon-wrapper">
+  		<div class="ribbon-text">Proteger tu patrimonio es nuestra pasión</div>
+  	</div>
+    <strong class="orange">NUESTROS VALORES</strong><br><br>Excelencia&nbsp;&nbsp;Profesionalismo&nbsp;&nbsp;Confianza&nbsp;&nbsp;Integridad&nbsp;&nbsp;Eficiencia
+  </ion-card-content>
+</ion-card>
+</ion-content>

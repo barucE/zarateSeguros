@@ -9,6 +9,11 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AboutPageModule } from "../pages/about/about.module";
+import { CompaniesInfoPageModule } from "../pages/companies-info/companies-info.module";
+import { CompaniesPageModule } from "../pages/companies/companies.module";
+import { ContactPageModule } from "../pages/contact/contact.module";
+import { ProductsPageModule } from "../pages/products/products.module";
 @NgModule({
   declarations: [
     MyApp,
@@ -18,6 +23,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AboutPageModule,
+    CompaniesInfoPageModule,
+    CompaniesPageModule,
+    ContactPageModule,
+    ProductsPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

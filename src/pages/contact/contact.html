@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="contact form">
+    <div class="left">
+      <span>
+        Llámanos 38549522 y 38538973 <br>o<br> envíanos tus datos para contactarte
+      </span>
+    </div>
+    <div class="right">
+      <form autocomplete="off" >
+        <ion-item>
+          <ion-label floating>Nombre</ion-label>
+          <ion-input type="text"  [(ngModel)]="contact.name" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Teléfono</ion-label>
+          <ion-input type="phone" [(ngModel)]="contact.phone" name="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Empresa</ion-label>
+          <ion-input type="text" [(ngModel)]="contact.company" name="company"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Correo Electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="contact.email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+        <button ion-button (tap)="sendEmail()" block small color="brand-color">Enviar</button>
+        </ion-item>
+      </form>
+    </div>
+    <div class="ribbon-wrapper">
+      <div class="ribbon-text"> 
+        Jesus Garcia #1276-1 Col. Villaseñor C.P. 44260, Guadalajara, Jalisco, México.
+      </div>
+    </div>
+  </div>
+  <div class="contact map">
+    <div class="arrow">
+      ¿Cómo llegar?
+    </div>
+    <iframe width="90%" height="100%" frameborder="0" style="left:5%;margin-left:5%;margin-top:30px;"
+src="https://www.google.com/maps/embed/v1/place?q=Jesus%20Garcia%20%231276-1%20Col.%20Villase%C3%B1or%20C.P.%2044260%2C%20Guadalajara%2C%20Jalisco%2C%20M%C3%A9xico.&key=AIzaSyDYY2xP8MXzZ94bZ0VLh-nugTiabBkMhC4" allowfullscreen></iframe>
+  </div>
+
+  <ion-fab bottom right edge >
+    <button ion-fab mini color="brand-color"><ion-icon name="thumbs-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="brand-color"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="brand-color"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
