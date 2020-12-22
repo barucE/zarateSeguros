@@ -24,6 +24,7 @@
 	background-color: #888;
 	color: white;
 	padding: 4px;
+	font-weight: lighter;
 }
 .toolbar{
 	padding: 0;
@@ -35,7 +36,7 @@
 }
 
 .main-banner{
-	height: 300px;
+	height: 350px;
 	img{
 		width: 100%;
 		height: auto;
@@ -44,6 +45,13 @@
 .description-box{
 	margin: 0;
 	width: 100%;
+}
+.navbar{
+	min-height: 70px;
+}
+
+.navbar-buttons{
+	margin-right: 50px;
 }
 .products-grid{
 	.col{
@@ -54,8 +62,9 @@
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 		.icon{
-			font-size: 2.4em;
+			font-size: 3.3em;
 			vertical-align: middle;
+			min-width: 45px;
 		}
 		.label{
 			display: inline-block;
@@ -63,6 +72,13 @@
 			white-space: pre-wrap;
 			width: 130px;
 			border: 0px solid green;
+			font-weight: 500;
+			padding-left: 5px;
+
+			@media screen and (max-width: 426px) {
+			    font-size: 1rem;
+			    width: 50px;
+			}
 		}
 		border: 0px solid red;
 		position: relative;
@@ -72,10 +88,18 @@
 
 .companies-footer{
 	text-align: center;
-	height: 58px;
-	img{
+	border-top: solid 1px #777;
+	.img-content{
 		display: inline-block;
-		height: 30px;
+		width: 13%;
+
+		@media screen and (max-width: 426px){
+			display: none;
+		}
+
+		img{
+			height: 30px;
+		}
 	}
 	background: white;
 }
@@ -94,7 +118,7 @@
 	color: #f35731;
 }
 .last-element{
-	padding-bottom: 250px;
+	padding-bottom: 70px;
 }
 
 .ribbon-wrapper{
@@ -133,8 +157,14 @@
 		padding: 3px 20px;
 		border:1px solid white;
 		border-top: 4px solid white;
-		
-		
+		font-size: 1.5rem;
+		@media screen and (max-width: 426px){
+			font-size: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 426px){
+		width: 370px
 	}
 }
 
@@ -161,11 +191,12 @@ ion-fab[bottom][edge]{
 			margin: 10px auto;
 
 		}
-		font-size: 0.8em;
+		font-size: 1.3rem;
 				strong{
 			text-align: center;
 			display: block;
-			font-size: 1.3em;
+			font-size: 1.6rem;
+			color: #f35731;
 		}
 		text-align: left;
 		height: 100%;
@@ -176,10 +207,11 @@ ion-fab[bottom][edge]{
 		display: inline-block;
 		vertical-align: top;
 		margin: auto;
-		background-color: #777;
+		background-color: #AAA;
 		position: relative;
 			
 		margin-left: 10px;
+		min-height: 170px;
 		&:nth-child(2){
 			
 			
@@ -200,7 +232,7 @@ ion-fab[bottom][edge]{
 		 	position: absolute;
 		 	width: 0;
 		 	border: 15px solid transparent;
-		 	border-left-color: #777;
+		 	border-left-color: #AAA;
 		 	top: calc(50% - 22px);
 		 	left: -15px;
 		 
@@ -216,7 +248,7 @@ ion-fab[bottom][edge]{
 	color: white;
 	&.form{
 		height: 55%;
-		margin-top: 50px;
+		margin-top: 70px;
 		background-color: #777;
 		.left, .right{
 			vertical-align: top;
@@ -257,6 +289,7 @@ ion-fab[bottom][edge]{
 				top: 40%;
 				left: 25%;
 				width: 50%;
+				font-size: 1.5rem;
 
 			}
 		}
@@ -311,4 +344,60 @@ ion-fab[bottom][edge]{
 			}
 		}
 	}
+}
+
+.card-content-md{
+	font-size: 1.6rem;
+}
+
+.bar-button-default-md:hover:not(.disable-hover){
+	color: #f35731;
+}
+
+.products-grid .row{
+	align-items: center;
+}
+
+.toolbar-content-md{
+	background-color: #f35731;
+	max-width: 250px;
+
+	h1, h5{
+		color: white;
+		margin: 0;
+		padding-left: 5px;
+		display: inline-block;
+	}
+
+	h1{
+		font-size: 4rem;
+	}
+
+	&:after{
+		content: ' ';
+	    height: 0;
+	    position: absolute;
+	    width: 0;
+	    border-top: 70px solid transparent;
+	    border-right: 50px solid white;
+	    bottom: 0;
+	}
+}
+
+.company-content{
+	.icon-md-brand-color{
+		font-size: 5rem;
+	}
+}
+
+.description-box.products ion-label{
+	white-space: inherit;
+}
+
+.toolbar-background-md{
+	background-color: #fff;
+}
+
+.fab ion-icon{
+	color: #fff;
 }
