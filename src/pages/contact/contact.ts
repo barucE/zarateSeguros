@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpModule } from '@angular/http';
+import { Http } from '@angular/http';
 /**
  * Generated class for the ContactPage page.
  *
@@ -20,36 +20,26 @@ export class ContactPage {
 		company: "",
 		email: "",
 	}
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    this.http = http;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
   }
   sendEmail(){
-  var http = new XMLHttpRequest();
-  var url = 'emailer.php';
-  var params = '&name=this.contact.name&phone=this.contact.phone&company=this.contact.company&email=this.contact.email';
-  http.open('POST', url, true);
+    var url = "https://zarateseguros.com/mailer.php";
 
-  //Send the proper header information along with the request
-  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    var body = JSON.stringify({name: this.contact.name, phone: this.contact.phone, company: this.contact.company, email: this.contact.email});
 
-  http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
-      }
-  }
-  http.send(params);
-    /*
-  	console.log(this.contact);
- 	this.http.post(
- 			'localhost:8000/email.php', 
- 			this.contact,
-			{
-			  headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT'}
-			}
- 		); */
+    this.http.post(url, body)
+    .subscribe(data => {
+         alert('Correo enviado exitosamente')
+    },
+         err => {
+         console.log("ERROR!: ", err);
+         alert(err);
+    });
   }
 
 }

@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-navbar color="default">
+  <ion-navbar color="default" class="navbar">
 
-    <img src="./assets/imgs/logo.png" id="logo">
-   <ion-buttons end class="hidden-xs">
+    <h1>Zárate</h1><h5>SEGUROS</h5>
+   <ion-buttons end class="hidden-xs navbar-buttons">
       <button ion-button *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
@@ -15,7 +15,7 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar color="brand-color">
-      <ion-title>Menu</ion-title>
+      <ion-title>Menú</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -30,10 +30,28 @@
 </ion-menu>
 
 <ion-footer no-border class="companies-footer">  
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <img src="https://www.expoknews.com/wp-content/uploads/2013/06/GNP.jpg">
-    <div class="footer-info">Jesus Garcia #1276-1 Col. Villaseñor C.P. 44260, Guadalajara, Jalisco, México. Teléfonos: 38-54-9522 y 38-53-89-73</div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/mapfre.jpg">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/allianz.png">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/metlife.png">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/qualitas.png">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/gnp.png">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/aba.png">
+  </div>
+  <div class="img-content">
+    <img src="./assets/imgs/footer/afirme.jpg">
+  </div>
+  <div class="footer-info">Jesús García #1276-1 Col. Villaseñor C.P. 44260, Guadalajara, Jalisco, México. Teléfonos: 38-54-9522 y 38-53-89-73</div>
 </ion-footer>
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

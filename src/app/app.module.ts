@@ -14,6 +14,7 @@ import { CompaniesInfoPageModule } from "../pages/companies-info/companies-info.
 import { CompaniesPageModule } from "../pages/companies/companies.module";
 import { ContactPageModule } from "../pages/contact/contact.module";
 import { ProductsPageModule } from "../pages/products/products.module";
+import { HttpModule} from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -28,6 +29,7 @@ import { ProductsPageModule } from "../pages/products/products.module";
     CompaniesPageModule,
     ContactPageModule,
     ProductsPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
